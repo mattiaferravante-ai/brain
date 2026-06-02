@@ -6,39 +6,74 @@ Regole operative per i progetti Odoo gestiti nell'ambito lavorativo.
 
 ## 1. Struttura documentale per progetto
 
-Ogni progetto cliente ha una cartella in `Work/Clients/NomeCliente_NomeProgetto/` con:
+I progetti Avvale vivono in `Work/Avvale/projects/NomeProgetto/`.  
+Altri clienti/progetti vanno in `Work/Clients/NomeProgetto/`.
+
+Usa `/new-project Avvale/projects NomeProgetto` per creare la struttura completa.
 
 ```
-NomeCliente_NomeProgetto/
-├── README.md               ← stack, contatti, URL ambienti, note generali
+NomeProgetto/
+├── README.md               ← stack, contatti, URL ambienti, stato progetto, ultimo meeting
+├── PROJECT_SUMMARY.md      ← riepilogo cumulativo: requisiti, decisioni, processi, stakeholders
 ├── AF/                     ← Analisi Funzionali (usa skill functional-analysis)
 ├── UAT/                    ← Test Book (usa skill uat-testbook)
-├── MeetingNotes/           ← Verbali meeting (YYYY-MM-DD_topic.md)
+├── MeetingNotes/           ← Verbali meeting (YYYY-MM-DD_meeting.md)
 └── TechNotes/              ← Workaround, config, SQL, script
 ```
 
 ---
 
-## 2. Naming convention
+## 2. Pipeline standard: Meeting → AF
+
+Il flusso per costruire un'Analisi Funzionale parte dalle trascrizioni delle riunioni:
+
+```
+Trascrizione riunione
+      ↓
+/minute Avvale/projects/NomeProgetto
+      ↓
+MeetingNotes/YYYY-MM-DD_meeting.md   ← verbale strutturato
+PROJECT_SUMMARY.md                   ← aggiornato in append (requisiti, decisioni, processi...)
+README.md                            ← aggiornato con "Ultimo meeting"
+      ↓
+(ripeti per ogni meeting)
+      ↓
+/functional-analysis Avvale/projects/NomeProgetto
+      ↓
+AF/AF_Modulo_v1.docx
+```
+
+**Correggere info nel PROJECT_SUMMARY:**
+- Correzione puntuale → chiedi a Claude ("nel PROJECT_SUMMARY di X, cambia Y con Z")
+- Modifica estesa → edita direttamente in Obsidian (è markdown normale)
+
+---
+
+## 3. Naming convention
 
 | Tipo documento      | Formato nome file                              |
 |---------------------|------------------------------------------------|
 | Analisi Funzionale  | `AF_ModuloOArgomento_v1.docx`                  |
 | UAT Test Book       | `UAT_ModuloOArgomento_v1.xlsx`                 |
-| Meeting Notes       | `YYYY-MM-DD_topic.md`                          |
+| Meeting Notes       | `YYYY-MM-DD_meeting.md`                        |
 | Tech Notes          | `argomento_tecnico.md`                         |
+| Project Summary     | `PROJECT_SUMMARY.md` (fisso, uno per progetto) |
 
 ---
 
-## 3. Tool AI disponibili
+## 4. Tool AI disponibili
 
-- **functional-analysis** skill → genera `.docx` AF stile Avvale
-- **uat-testbook** skill → genera `.xlsx` UAT con fogli Funzionale/Tecnico
-- **odoo-permission-builder** skill → genera `ir.rule` e access rights XML
+| Skill | Trigger | Output |
+|-------|---------|--------|
+| `/new-project` | Nuovo progetto/cliente | Struttura cartelle + README + PROJECT_SUMMARY |
+| `/minute` | Trascrizione riunione | Verbale + aggiornamento PROJECT_SUMMARY + README |
+| `/functional-analysis` | Pronto per AF | `.docx` AF stile Avvale |
+| `/uat-testbook` | Pronto per UAT | `.xlsx` UAT con fogli Funzionale/Tecnico |
+| `/odoo-permission-builder` | Record rules / permessi | XML `ir.rule` e access rights |
 
 ---
 
-## 4. Ambienti standard Odoo
+## 5. Ambienti standard Odoo
 
 Da documentare in ogni `README.md` di progetto:
 - URL prod / staging / dev
