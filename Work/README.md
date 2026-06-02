@@ -12,7 +12,7 @@ Area dedicata ai progetti Odoo e attività professionali (Avvale S.p.A.).
 - `Avvale/` — Azienda attuale: progetti e materiali Avvale S.p.A.
 - `Clients/` — Una cartella per cliente/progetto attivo o storico
 - `Templates/` — Template riutilizzabili: AF, UAT, Meeting Notes, Gap Analysis
-- `Skills/` — Skill Claude per generare documenti (CV, AF, UAT, permessi)
+- `Skills/` — Skill Claude per generare documenti (CV, AF, UAT, permessi, nuovi progetti)
 - `CV/` — Versioni generate del curriculum
 - `Resources/` — Risorse tecniche generali: cheatsheet, pattern, riferimenti
 
