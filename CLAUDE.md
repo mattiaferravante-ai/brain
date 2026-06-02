@@ -54,7 +54,13 @@ Questo vale anche per file generati (CV, AF, UAT) — aggiungerli sempre all'ind
 ### Meeting Minutes
 **Trigger:** ogni volta che si parla di verbale, minute, meeting notes, trascrizione riunione, recap meeting, note di riunione.  
 **Skill da usare:** `minute`  
-**Output:** file `.md` salvato in `Work/<progetto>/MeetingNotes/` + aggiornamento README progetto
+**Output:** file `.md` in `Work/<progetto>/MeetingNotes/` + aggiornamento `PROJECT_SUMMARY.md` + aggiornamento README progetto
+
+### Pipeline Meeting → AF
+Il flusso standard per arrivare all'Analisi Funzionale è:
+1. `/minute` dopo ogni riunione → accumula dati in `PROJECT_SUMMARY.md`
+2. Correzioni puntuali: chiedi a Claude oppure edita direttamente in Obsidian
+3. `/functional-analysis` quando pronto → legge `PROJECT_SUMMARY.md` come input primario
 
 ---
 
