@@ -50,6 +50,11 @@ Questo vale anche per file generati (CV, AF, UAT) — aggiungerli sempre all'ind
 **Skill da usare:** `odoo-permission-builder`  
 **Output:** XML pronto per modulo custom
 
+### Meeting Minutes
+**Trigger:** ogni volta che si parla di verbale, minute, meeting notes, trascrizione riunione, recap meeting, note di riunione.  
+**Skill da usare:** `minute`  
+**Output:** file `.md` salvato in `Work/<progetto>/MeetingNotes/` + aggiornamento README progetto
+
 ---
 
 ## Workflow per contesto
