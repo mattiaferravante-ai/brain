@@ -1,10 +1,14 @@
 # Project Summary — <NomeProgetto>
 
+**Cliente:** <Cliente>  
+**Odoo:** <Versione> (<Community|Enterprise>)  
+**Tipo:** <nuova implementazione | migrazione | personalizzazione | supporto>  
+**Inizio:** <data> — **Durata stimata:** <durata>
+
 Documento cumulativo aggiornato automaticamente dopo ogni meeting.
 Serve come base di input per l'Analisi Funzionale (`/functional-analysis`).
 
-> **Non modificare manualmente** — viene aggiornato dalla skill `/minute` ad ogni verbale.  
-> Per l'AF, usa questo file come fonte primaria insieme alle singole minute in `MeetingNotes/`.
+> Aggiornato dalla skill `/minute` ad ogni verbale. Per correzioni: chiedi a Claude o edita direttamente in Obsidian.
 
 ---
 
