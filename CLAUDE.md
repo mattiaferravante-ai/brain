@@ -72,6 +72,8 @@ Questo vale anche per file generati (CV, AF, UAT) — aggiungerli sempre all'ind
 |---------|------|----------|
 | `/generate-cv` | Brain o qualsiasi progetto con Brain | Genera CV da PROFESSIONAL_PROFILE |
 | `/uploadbrain` | Qualsiasi progetto | Aggiunge symlink Brain, .gitignore, CLAUDE.md e attiva sync |
+| `/new-project` | Brain | Crea struttura cartelle per un nuovo progetto in Work/ |
+| `/minute` | Brain | Genera verbale + action items da trascrizione riunione |
 
 ---
 
