@@ -19,6 +19,18 @@ Vedi `Work/PROFESSIONAL_PROFILE.md` per il profilo completo.
 - Per documenti di progetto: salvare sempre in `Work/Clients/NomeProgetto/`
 - Per template: usare quelli in `Work/Templates/` come base
 
+## Manutenzione struttura Brain (OBBLIGATORIO)
+
+Ad ogni modifica strutturale del Brain (nuovo file, nuova cartella, rimozione, rinomino) devi:
+
+1. **Aggiornare il README.md della cartella** interessata con il nuovo file/cartella
+2. **Aggiornare `README.md` radice** se cambia la struttura di primo livello
+3. **Aggiornare i tag** del file nuovo per coerenza con la cartella (`#personal`, `#work`, ecc.)
+4. **Aggiornare i wikilink Obsidian** (`[[NomeFile]]`) in tutti i file che referenziano la struttura modificata
+5. **Non lasciare mai file orfani** — ogni file deve comparire in almeno un README o indice
+
+Questo vale anche per file generati (CV, AF, UAT) — aggiungerli sempre all'indice della cartella.
+
 ---
 
 ## Skill obbligatorie per contesto Work

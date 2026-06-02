@@ -2,10 +2,17 @@
 
 Area dedicata ai progetti Odoo e attività professionali (Avvale S.p.A.).
 
+## File
+
+- [[PROFESSIONAL_PROFILE]] — Profilo professionale completo (carriera, competenze, versioni Odoo)
+- `CV/CV_Ferravante_it_2026-06.md` — Curriculum vitae italiano (giugno 2026)
+
 ## Sottocartelle
 
 - `Clients/` — Una cartella per cliente/progetto attivo o storico
 - `Templates/` — Template riutilizzabili: AF, UAT, Meeting Notes, Gap Analysis
+- `Skills/` — Skill Claude per generare documenti (CV, AF, UAT, permessi)
+- `CV/` — Versioni generate del curriculum
 - `Resources/` — Risorse tecniche generali: cheatsheet, pattern, riferimenti
 
 ## Struttura consigliata per ogni cliente

@@ -9,6 +9,10 @@ Vedi `PROJECT_WORKFLOW.md` — si applica a **tutti** i progetti qui dentro:
 - GitHub per versioning
 - Notion per knowledge base del progetto
 
+## Progetti
+
+- [[HomeBase]] — App personale self-hosted (Finance, Smart Home, Meals, Fitness, Brain, ecc.) — obiettivo SaaS
+
 ## Struttura consigliata per ogni progetto
 
 ```
@@ -20,4 +24,4 @@ Dev/
 
 ## Tag
 
-`#dev` `#personal` `#python` `#sideproject`
+`#dev` `#personal` `#python` `#sideproject` `#homebase`
