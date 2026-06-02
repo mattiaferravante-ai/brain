@@ -84,6 +84,17 @@ Usa le risposte dell'onboarding per riempire il README (nessun placeholder vuoto
 - `TechNotes/` — Note tecniche, workaround, configurazioni
 - `PROJECT_SUMMARY.md` — Riepilogo cumulativo: requisiti, decisioni, processi, stakeholders
 
+## Setup Brain
+
+Dopo aver clonato la repo, attiva il Brain con Claude Code:
+
+```
+/uploadbrain
+```
+
+Crea il symlink `Brain/`, aggiorna `.gitignore` e carica le istruzioni operative.
+Richiede che `~/Brain` esista in locale (clonato da GitHub).
+
 ## Tag
 
 `#avvale` `#odoo` `#work` `#active`
