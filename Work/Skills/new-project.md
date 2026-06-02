@@ -47,6 +47,7 @@ Ogni volta che si vuole creare un nuovo progetto, una nuova sezione, un nuovo cl
 - `UAT/` — Test Book e risultati
 - `MeetingNotes/` — Verbali meeting
 - `TechNotes/` — Note tecniche, workaround, configurazioni
+- `PROJECT_SUMMARY.md` — Riepilogo cumulativo: requisiti, decisioni, processi, stakeholders
 
 ## Stato
 
