@@ -14,32 +14,67 @@ Ogni volta che si vuole creare un nuovo progetto, una nuova sezione, un nuovo cl
 
 ## Comportamento
 
-1. Costruisci il percorso: `Work/<area>/<nome>/`
-2. Crea le sottocartelle in base al tipo:
-   - **full:** `AF/`, `UAT/`, `MeetingNotes/`, `TechNotes/`
-   - **minimal:** solo `README.md`, nessuna sottocartella
-3. Crea `README.md` nella cartella del progetto (vedi template sotto)
-3b. Per tipo `full`, crea anche `PROJECT_SUMMARY.md` copiando e adattando il template da `Work/Templates/PROJECT_SUMMARY_template.md` (sostituisci `<NomeProgetto>` con il nome reale)
-4. Aggiorna il `README.md` della cartella padre (`Work/<area>/`) aggiungendo una riga nella sezione Progetti
-5. Se non esiste la sezione "Progetti" nel README padre, creala
-6. Aggiorna `Work/README.md` solo se si tratta di una nuova area di primo livello (non già presente)
+### Step 0 — Onboarding (OBBLIGATORIO per tipo `full`)
 
-## Template README progetto (full)
+Prima di creare qualsiasi file, poni queste domande all'utente in un unico messaggio strutturato. Non procedere finché non hai le risposte.
+
+```
+Perfetto, creo il progetto <nome>. Prima dimmi:
+
+1. **Cliente** — ragione sociale o nome breve dell'azienda cliente
+2. **Tipo progetto** — nuova implementazione / migrazione / personalizzazione / supporto continuativo
+3. **Versione Odoo** — es. 16, 17, 18 (Community o Enterprise?)
+4. **Moduli coinvolti** — es. Contabilità, Magazzino, Acquisti, CRM, Produzione...
+5. **Data inizio** — anche approssimativa (es. "giugno 2026")
+6. **Durata stimata** — es. 3 mesi, 6 mesi, ongoing
+7. **PM Avvale** — nome del Project Manager interno
+8. **Referente cliente** — nome e ruolo del referente lato cliente
+9. **Ambienti** — URL prod / staging / dev (anche "da definire")
+10. **Note aggiuntive** — vincoli, dipendenze, contesto utile (opzionale)
+```
+
+Accetta risposte parziali: se l'utente non sa qualcosa, usa `Da definire` come placeholder.
+
+### Step 1 — Crea struttura
+
+Costruisci il percorso `Work/<area>/<nome>/` e crea le sottocartelle:
+- **full:** `AF/`, `UAT/`, `MeetingNotes/`, `TechNotes/`
+- **minimal:** solo `README.md`, nessuna sottocartella
+
+### Step 2 — Crea README.md pre-compilato
+
+Usa le risposte dell'onboarding per riempire il README (nessun placeholder vuoto):
 
 ```markdown
 # <NomeProgetto>
 
-<!-- descrizione breve del progetto -->
+<descrizione sintetica: tipo progetto + cliente + obiettivo principale>
 
 ## Stack
 
-- Odoo: <!-- versione -->
-- Moduli: <!-- es. Contabilità, Magazzino, ... -->
+- **Odoo:** <versione> (<Community|Enterprise>)
+- **Moduli:** <lista moduli>
+
+## Timeline
+
+- **Inizio:** <data inizio>
+- **Durata stimata:** <durata>
+- **Stato:** `#active`
 
 ## Contatti
 
-- PM: 
-- Referente cliente: 
+| Ruolo | Nome |
+|-------|------|
+| PM Avvale | <PM> |
+| Referente cliente | <referente> |
+
+## Ambienti
+
+| Ambiente | URL |
+|----------|-----|
+| Produzione | <url o "Da definire"> |
+| Staging | <url o "Da definire"> |
+| Dev | <url o "Da definire"> |
 
 ## Sottocartelle
 
@@ -49,14 +84,26 @@ Ogni volta che si vuole creare un nuovo progetto, una nuova sezione, un nuovo cl
 - `TechNotes/` — Note tecniche, workaround, configurazioni
 - `PROJECT_SUMMARY.md` — Riepilogo cumulativo: requisiti, decisioni, processi, stakeholders
 
-## Stato
-
-`#active` | `#completed` | `#on-hold`
-
 ## Tag
 
-`#avvale` `#odoo` `#work`
+`#avvale` `#odoo` `#work` `#active`
 ```
+
+### Step 3 — Crea PROJECT_SUMMARY.md pre-compilato
+
+Copia il template da `Work/Templates/PROJECT_SUMMARY_template.md` e pre-compila:
+- Intestazione con nome progetto, cliente, versione Odoo
+- Sezione **Stakeholders** con PM e referente cliente già inseriti
+- Tutto il resto vuoto, pronto per essere riempito dai `/minute`
+
+### Step 4 — Aggiorna README padre e indici
+
+- Aggiorna `Work/<area>/README.md` aggiungendo il progetto nella sezione Progetti
+- Aggiorna `Work/README.md` solo se è una nuova area di primo livello
+
+### Step 5 — Conferma
+
+Mostra il tree della struttura creata e un riepilogo delle info inserite.
 
 ## Template README progetto (minimal)
 
