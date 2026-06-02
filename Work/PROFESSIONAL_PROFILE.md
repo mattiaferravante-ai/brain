@@ -59,10 +59,15 @@ Consulente funzionale Odoo Enterprise con forte componente tecnica. Lavoro su im
 
 ---
 
-## Stack tecnico di riferimento
+## Versioni Odoo
+
+- **Esperienza da:** Odoo 14
+- **Certificazione:** Odoo 19 Functional ✓
+- **Progetti attivi:** Odoo 18 e 19
+- **Stack tecnico:**
 
 ```
-Odoo Enterprise 16/17
+Odoo Enterprise 18/19
 PostgreSQL 14+
 Python 3.10+
 Docker + docker-compose
