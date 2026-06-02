@@ -61,6 +61,15 @@ Questo vale anche per file generati (CV, AF, UAT) — aggiungerli sempre all'ind
 
 ---
 
+## Comandi disponibili
+
+| Comando | Dove | Funzione |
+|---------|------|----------|
+| `/generate-cv` | Brain o qualsiasi progetto con Brain | Genera CV da PROFESSIONAL_PROFILE |
+| `/uploadbrain` | Qualsiasi progetto | Aggiunge symlink Brain, .gitignore, CLAUDE.md e attiva sync |
+
+---
+
 ## Struttura Brain
 
 ```

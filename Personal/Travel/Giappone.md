@@ -21,7 +21,7 @@
 **Periodo:** Aprile 2026
 **Partecipanti:** 6 persone (gruppo di amici)
 **Stile:** Tranquillo — ritmo rilassato, più goduto
-**Città:** Tokyo, Hiroshima, Kyoto, Osaka
+**Città:** Tokyo, Kyoto, Osaka
 
 > Secondo giro con più consapevolezza dei posti. Stesse città ma vissute diversamente.
 

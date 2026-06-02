@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Secrets — mai nel Brain
+*.env
+*.pem
+*.key
+credentials.md
+passwords.md
