@@ -2,6 +2,32 @@
 
 Questo è il tuo sistema di knowledge management personale, ottimizzato per VSCode + Obsidian.
 
+## Setup — Prima installazione
+
+Dopo aver clonato la repo in `~/Brain`:
+
+```bash
+# 1. Rendi eseguibile ed esegui lo script di installazione
+chmod +x ~/Brain/install.sh && ~/Brain/install.sh
+```
+
+Lo script fa tutto: copia i comandi Claude globali e verifica i prerequisiti.
+
+**Oppure manualmente:**
+
+```bash
+# Copia i comandi Claude globali (disponibili in tutti i progetti)
+mkdir -p ~/.claude/commands
+cp ~/Brain/.claude/commands/pullbrain.md ~/.claude/commands/
+cp ~/Brain/.claude/commands/uploadbrain.md ~/.claude/commands/
+```
+
+I comandi rimanenti (`/minute`, `/new-project`, `/generate-cv`, ecc.) sono già attivi quando Claude Code è aperto nella cartella `~/Brain`.
+
+Per usare il Brain in un altro progetto, aprilo con Claude Code ed esegui `/uploadbrain`.
+
+---
+
 ## Struttura
 
 ```
