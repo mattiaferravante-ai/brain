@@ -67,6 +67,7 @@ Consulente funzionale Odoo Enterprise con forte componente tecnica. Lavoro su im
 | 03/2023 – ? | **BIP-Group spa** | Senior Consultant – AMS (CRM, metering, billing, credito) |
 | 04/2022 – 03/2023 | **Huroos srl** | Business Analyst & Developer Odoo |
 | 05/2017 – 11/2021 | **Motip Dupli Italia Srl** (Milano) | Head of Accounting Department |
+| 11/2021 – 04/2022 | *(gap volontario)* | Pivot carriera: studio Python, statistica, data science (Start2Impact) |
 | 07/2015 – 05/2017 | **Interplanet srl** (Milano) | Contabilità generale |
 
 ### Note per azienda
