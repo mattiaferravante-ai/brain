@@ -8,14 +8,18 @@
 
 ## Background formativo
 
-- **Liceo Scientifico** — frequentato, bocciato in 1ª, poi cambiato indirizzo
-- **ITIS / Ragioneria con indirizzo informatico** — diploma conseguito (con una bocciatura in 5ª)
-- Percorso non lineare, ma con forte componente tecnica fin dall'inizio
+| Periodo | Titolo | Istituto |
+|---------|--------|----------|
+| 2008–2014 | Diploma ragioneria indirizzo programmatori | ITC "Gino Zappa", Saronno |
+| 2014–2015 | Specializzazione IFTS — Tecniche Amministrazione Economico Finanziaria | Galdus, Milano |
+| 2021–2022 | Percorso Data Science | Start2Impact (analisi dati, ML, visualizzazione) |
 
-## Competenze base acquisite da autodidatta
+Percorso scolastico non lineare: bocciato in 1ª al liceo scientifico, cambiato indirizzo; bocciato una volta in 5ª di ragioneria.
 
-- Comprensione di come funzionano i PC e le reti fin dalle scuole medie/1ª superiore
-- Conoscenza dei linguaggi di programmazione (logica, concetti base) da giovane
+## Competenze tecniche (autodidatta + lavoro)
+
+- Comprensione di PC e reti fin dalle scuole medie (server Minecraft in 1ª/2ª superiore)
+- Python, SQL, XML, HTML, MongoDB, PowerBI, macOS, Ubuntu
 - **Inglese** — buona padronanza (scritto e parlato)
 
 ---
