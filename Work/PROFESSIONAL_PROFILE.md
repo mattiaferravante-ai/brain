@@ -63,14 +63,16 @@ Consulente funzionale Odoo Enterprise con forte componente tecnica. Lavoro su im
 
 | Periodo | Azienda | Ruolo |
 |---------|---------|-------|
-| Attuale | **Avvale S.p.A.** | Odoo Functional & ERP Consultant |
-| 03/2023 – ? | **BIP-Group spa** | Senior Consultant – AMS (CRM, metering, billing, credito) |
+| 08/2025 – attuale | **Avvale S.p.A.** | Odoo Functional & ERP Consultant |
+| 03/2023 – 08/2025 | **BIP-Group spa** | Senior Consultant – AMS (CRM, metering, billing, credito) |
 | 04/2022 – 03/2023 | **Huroos srl** | Business Analyst & Developer Odoo |
 | 05/2017 – 11/2021 | **Motip Dupli Italia Srl** (Milano) | Head of Accounting Department |
 | 11/2021 – 04/2022 | *(gap volontario)* | Pivot carriera: studio Python, statistica, data science (Start2Impact) |
 | 07/2015 – 05/2017 | **Interplanet srl** (Milano) | Contabilità generale |
 
 ### Note per azienda
+
+**Avvale** — Lead Process Specialist. Punto di riferimento funzionale Odoo nei progetti: raccolta requisiti con il cliente, redazione AF (AS-IS/TO-BE/Gap), preparazione ed esecuzione UAT, progettazione processi, interfaccia con il team di sviluppo per trasmettere le specifiche. Referente interno per domande su come implementare funzionalità in Odoo.
 
 **BIP-Group** — responsabile area CRM nel team AMS. Gestione ticket, bugfixing, UAT, configurazioni Odoo CRM. Stack: Python, MongoDB, PostgreSQL.
 
