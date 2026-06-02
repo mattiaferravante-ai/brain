@@ -16,7 +16,8 @@ Vedi `Work/PROFESSIONAL_PROFILE.md` per il profilo completo.
 
 - Risposte in italiano salvo diversa indicazione
 - Stile: diretto, tecnico, senza fluff
-- Per documenti di progetto: salvare sempre in `Work/Clients/NomeProgetto/`
+- Per progetti Avvale: salvare sempre in `Work/Avvale/projects/NomeProgetto/`
+- Per altri clienti/progetti: salvare in `Work/Clients/NomeProgetto/`
 - Per template: usare quelli in `Work/Templates/` come base
 
 ## Manutenzione struttura Brain (OBBLIGATORIO)
