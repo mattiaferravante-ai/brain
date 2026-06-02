@@ -65,7 +65,26 @@ Salva in `Work/<progetto>/MeetingNotes/YYYY-MM-DD_meeting.md` con questa struttu
 <data e obiettivo, oppure "Da definire">
 ```
 
-### Step 3 — Aggiorna il README del progetto
+### Step 3 — Aggiorna PROJECT_SUMMARY.md
+
+Apri `Work/<progetto>/PROJECT_SUMMARY.md`. Se non esiste, crealo dal template in `Work/Templates/PROJECT_SUMMARY_template.md`.
+
+Per ogni sezione, **aggiungi in append** le nuove informazioni emerse dal meeting corrente — non sovrascrivere mai le righe esistenti:
+
+| Sezione PROJECT_SUMMARY | Cosa aggiungere da questo meeting |
+|------------------------|----------------------------------|
+| `## Requisiti emersi` | Nuovi requisiti o vincoli espressi |
+| `## Decisioni chiave` | Decisioni formali prese, con data e link `[[YYYY-MM-DD_meeting]]` |
+| `## Processi da coprire` | Processi AS-IS o TO-BE menzionati |
+| `## Punti aperti` | Nuovi blocchi o issue aperti; chiudi con `~~testo~~` quelli risolti |
+| `## Stakeholders` | Nuovi partecipanti con nome, ruolo, azienda |
+
+Regole append:
+- Ogni riga nuova termina con `→ [[YYYY-MM-DD_meeting]]` come riferimento alla fonte
+- Non duplicare righe già presenti
+- Se un punto aperto viene risolto in questo meeting, barralocol con `~~testo~~` e aggiungi `✓ risolto [[YYYY-MM-DD_meeting]]`
+
+### Step 4 — Aggiorna il README del progetto
 
 Apri `Work/<progetto>/README.md` e aggiorna (o crea) la sezione `## Ultimo meeting`:
 
@@ -80,12 +99,13 @@ Apri `Work/<progetto>/README.md` e aggiorna (o crea) la sezione `## Ultimo meeti
 
 Se la sezione esiste già, sostituiscila con i nuovi dati.
 
-### Step 4 — Output a schermo
+### Step 5 — Output a schermo
 
 Mostra all'utente:
 1. Il verbale completo generato
 2. La lista action items in formato checklist
-3. Conferma del README aggiornato
+3. Riepilogo di cosa è stato aggiunto al PROJECT_SUMMARY (quante righe per sezione)
+4. Conferma del README aggiornato
 
 ## Note
 
