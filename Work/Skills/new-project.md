@@ -19,6 +19,7 @@ Ogni volta che si vuole creare un nuovo progetto, una nuova sezione, un nuovo cl
    - **full:** `AF/`, `UAT/`, `MeetingNotes/`, `TechNotes/`
    - **minimal:** solo `README.md`, nessuna sottocartella
 3. Crea `README.md` nella cartella del progetto (vedi template sotto)
+3b. Per tipo `full`, crea anche `PROJECT_SUMMARY.md` copiando e adattando il template da `Work/Templates/PROJECT_SUMMARY_template.md` (sostituisci `<NomeProgetto>` con il nome reale)
 4. Aggiorna il `README.md` della cartella padre (`Work/<area>/`) aggiungendo una riga nella sezione Progetti
 5. Se non esiste la sezione "Progetti" nel README padre, creala
 6. Aggiorna `Work/README.md` solo se si tratta di una nuova area di primo livello (non già presente)
