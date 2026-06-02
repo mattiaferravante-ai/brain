@@ -7,6 +7,7 @@ Template riutilizzabili per tutti i progetti Odoo/Avvale.
 | `TEMPLATE_ProjectREADME.md` | README di ogni progetto cliente (copia in `Clients/NomeProgetto/`) |
 | `TEMPLATE_MeetingNotes.md` | Verbale meeting (copia in `Clients/NomeProgetto/MeetingNotes/`) |
 | `TEMPLATE_TechNote.md` | Nota tecnica / workaround (copia in `Clients/NomeProgetto/TechNotes/`) |
+| `PROJECT_SUMMARY_template.md` | Riepilogo cumulativo di progetto — aggiornato da `/minute`, input per `/functional-analysis` |
 
 ## Documenti generati da AI
 
