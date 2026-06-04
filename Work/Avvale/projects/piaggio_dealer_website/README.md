@@ -29,6 +29,11 @@ Uno dei molteplici stream del cliente Piaggio seguiti da Avvale.
 | Staging | Da definire |
 | Dev | Da definire |
 
+## Scadenze
+
+<!-- Aggiungi qui milestone, go-live, UAT, consegne AF, ecc. -->
+<!-- Formato: - `YYYY-MM-DD` — descrizione scadenza -->
+
 ## Sottocartelle
 
 - `AF/` — Analisi Funzionali

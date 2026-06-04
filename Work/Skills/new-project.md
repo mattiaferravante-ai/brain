@@ -76,6 +76,11 @@ Usa le risposte dell'onboarding per riempire il README (nessun placeholder vuoto
 | Staging | <url o "Da definire"> |
 | Dev | <url o "Da definire"> |
 
+## Scadenze
+
+<!-- Aggiungi qui milestone, go-live, UAT, consegne AF, ecc. -->
+<!-- Formato: - `YYYY-MM-DD` — descrizione scadenza -->
+
 ## Sottocartelle
 
 - `AF/` — Analisi Funzionali
