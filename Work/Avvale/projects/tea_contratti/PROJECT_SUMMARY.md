@@ -55,6 +55,9 @@ Precedentemente la gestione offerte/contratti avveniva tramite **stampa unione W
 - Scadenza listini: annuale (31/12) o semestrale (30/06)
 - HP (classificazioni pericolo): dato sulla riga listino, non sull'anagrafica prodotto
 - Operazioni R/D: dato interno per backoffice, raramente stampato nell'offerta
+- Univocità riga listino fornitore: Prodotto + Destino + elenco HP + Operazione
+- HP e operazioni R/D sul prodotto CER: aggiornati automaticamente al censimento di un nuovo listino fornitore
+- Listino Prezzi Cliente: no listini custom; funzionalità standard Odoo usate all'occorrenza nelle righe di contratto RS
 
 **Offerte:**
 - Tre tipi di documenti: **Offerta RS (Rifiuti Speciali)**, **Offerta TMB**, **Contratto Discarica**
@@ -70,17 +73,27 @@ Precedentemente la gestione offerte/contratti avveniva tramite **stampa unione W
 - Pipeline CRM customizzata con 6 stage e blocchi di transizione
 - Stato intermedio "Attesa documenti" (On Hold) post-accettazione per backoffice
 - Notifiche email per Claudia (contratto firmato) e Andrea (offerte da approvare)
+- Su ogni Opportunità: **Referente Commerciale** (fisso, non cambia mai) distinto da **Assegnatario** (cambia per fase del processo)
+- Creazione manuale di un'Opportunità possibile senza passare da una Lead
 
 **Clienti:**
 - Ogni cliente può avere più unità produttive → offerta separata per ogni sede
-- Migrazione: solo ~500 clienti attivi (non tutte le 5000 anagrafiche VMS)
+- Migrazione: solo ~500 clienti attivi (non tutte le 5000 anagrafiche VMS); unità produttive create all'occorrenza o import separato
 - Sede legale ≠ sede di ritiro (fondamentale per trasporto e documenti)
+- Segmentazione clienti tramite tag nativi Odoo (es. azienda agricola, officina, edilizia, ente pubblico) — no custom fields
+- Dati fatturazione elettronica (SDI/PEC) completati al momento della firma tramite modulo allegato — non bloccanti per la generazione dell'offerta
+- Campi minimi per creazione cliente: ragione sociale, sede legale, indirizzo, P.IVA, PEC, referente commerciale (nome, email, telefono)
 
 **Documenti:**
-- Schede di caratterizzazione: univoche per CER × impianto × stato fisico → allegate al prodotto
+- Schede di caratterizzazione: chiave univocità = Tipologia Cliente + Prodotto CER + Destino + elenco HP + Operazione → su modello dedicato per ricerca agevole
 - Allegati standard (privacy, condizioni generali): template email offerta
-- Cron giornaliero reminder offerte in approvazione
+- Cron giornaliero reminder offerte in approvazione; supporto approvazione massiva contratti in coda giornaliera
 - PDF con font Carlito (compatibile Calibri Light); label UI in italiano
+- Contratto e allegati inviati in due email separate: (1) contratto con richiesta firma digitale, (2) allegati inviati manualmente dopo conferma firma
+- Tabella allegati in Opportunità: per ogni allegato → flag "deve tornare firmato dal cliente" + flag "è stato ricevuto firmato" + link Google Drive
+- Per stampa cliente: nascosti sotto-dettagli interni (stato fisico es. RETI/S1, operazione R/D, HP pericolo) — mantenuti nel sistema per backoffice ai fini inserimento VMS
+- Flag "Contiene dati Sensibili" su riga CER nell'offerta
+- Fornitore (testo libero) su righe servizi aggiuntivi (non un M2O a res.partner)
 
 ---
 
@@ -136,7 +149,7 @@ draft → approval → approved → sent → accepted
 
 - [ ] ~~Numero di protocollo: generazione automatica da Odoo o manuale da VMS?~~ → Risolto: protocollo RS auto-generato (`O` + progressivo + `/` + anno + `/` + iniziali referente) → [[2026-03-16_incontro-analisi-1]]
 - [ ] Filtri ricerca lead per zona/provincia (non standard Odoo) → [[2026-03-23_incontro-analisi-3]]
-- [ ] Automazione contratti complessi Discarica (17-20 pp): approccio con stampa unione → [[2026-03-23_incontro-analisi-3]]
+- ~~Automazione contratti complessi Discarica (17-20 pp): approccio con stampa unione → confermato nell'AF Rev. 02.0~~ → Risolto
 
 ---
 
@@ -186,7 +199,8 @@ draft → approval → approved → sent → accepted
 
 ## Documenti Knowledge Base
 
-- `AF/TEA_AE_CRM_Contratti_AF_00.1.docx` — Analisi Funzionale bozza 00.1 (04/06/2026) — basata su meeting notes analisi
+- `AF/TEA_AE_CRM_Contratti_AF_00.1.docx` — Analisi Funzionale bozza 00.1 — basata su meeting notes analisi
+- `TEA - A&E - Gestione preventivi ed ordini di vendita CRM Odoo - Analisi Funzionale - Rev. 02.0.docx` — AF Rev. 02.0 (20/05/2026) — aggiornamenti a valle di sviluppo e sessioni di preview (attualmente in Downloads)
 - `TechNotes/PIANO_IMPLEMENTAZIONE.md` — Piano implementazione completo v6 (architettura, modelli, viste, sicurezza, test)
 - `MeetingNotes/2026-03-16_incontro-analisi-1.md` — AS-IS processo offerte, requisiti CRM, flusso approvazione
 - `MeetingNotes/2026-03-19_incontro-analisi-2.md` — Utenti, migrazione clienti, listino prezzi, logica trasporto
@@ -194,4 +208,4 @@ draft → approval → approved → sent → accepted
 
 ---
 
-*Ultimo aggiornamento: 2026-06-04*
+*Ultimo aggiornamento: 2026-06-04 — sincronizzato da AF Rev. 02.0 (20/05/2026)*
