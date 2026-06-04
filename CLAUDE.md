@@ -56,11 +56,17 @@ Questo vale anche per file generati (CV, AF, UAT) — aggiungerli sempre all'ind
 **Skill da usare:** `minute`  
 **Output:** file `.md` in `Work/<progetto>/MeetingNotes/` + aggiornamento `PROJECT_SUMMARY.md` + aggiornamento README progetto
 
+### AF Sync (rilettura AF modificata)
+**Trigger:** ogni volta che si parla di "rileggere l'AF", "aggiornare il summary dall'AF", "sincronizzare l'AF", "ho modificato l'AF".  
+**Skill da usare:** `af-sync`  
+**Output:** `PROJECT_SUMMARY.md` aggiornato + report delle modifiche
+
 ### Pipeline Meeting → AF
 Il flusso standard per arrivare all'Analisi Funzionale è:
 1. `/minute` dopo ogni riunione → accumula dati in `PROJECT_SUMMARY.md`
 2. Correzioni puntuali: chiedi a Claude oppure edita direttamente in Obsidian
 3. `/functional-analysis` quando pronto → legge `PROJECT_SUMMARY.md` come input primario
+4. Modifica AF in Word → `/af-sync [progetto]` per riallineare `PROJECT_SUMMARY.md` → torna al punto 3
 
 ---
 
@@ -81,6 +87,7 @@ Il flusso standard per arrivare all'Analisi Funzionale è:
 | `/uploadbrain` | Qualsiasi progetto | Aggiunge symlink Brain, .gitignore, CLAUDE.md e attiva sync |
 | `/new-project` | Brain | Crea struttura cartelle per un nuovo progetto in Work/ |
 | `/minute` | Brain | Genera verbale + action items da trascrizione riunione |
+| `/af-sync [progetto]` | Brain | Rilegge l'AF .docx modificata e sincronizza PROJECT_SUMMARY.md |
 
 ---
 
