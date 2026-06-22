@@ -73,26 +73,41 @@ Serve come base di input per l'Analisi Funzionale (`/functional-analysis`).
 - `2026-06-22` — Integration hub: SAP Integration Suite confermato come middleware
 - `2026-06-22` — Tally: bridge custom da replicare/migliorare (versioni multiple)
 - `2026-06-22` — Mobile PLMS: da rifare da zero, nessun riuso (KPMG Q-18)
-- `2026-06-22` — E-Catalogue KeyTech: fuori scope, dismissione in 2-3 anni (Q06)
+- `2026-06-22` — E-Catalogue KeyTech: fuori scope, dismissione in 2-3 anni, no integrazione (Q06)
 - `2026-06-22` — VIN tracking: a livello VIN singolo (non batch/shipment)
 - `2026-06-22` — Credit sync SAP: periodica (non real-time), frequenza da definire (Q22)
+- `2026-06-22` — Customer notifications: **tutti e 3 i canali** (SMS + email + mobile push) obbligatori (Q21)
+- `2026-06-22` — Job card invoicing: conferma dealer obbligatoria prima di fatturare ricambi (Q24)
+- `2026-06-22` — PDI transport damage: nessun trigger automatico claim — manuale (Q20)
+- `2026-06-22` — AI fraud detection warranty: solo rule-based (nessun dataset storico disponibile, Q07)
+- `2026-06-22` — Predictive maintenance: Wave 2, low priority (Q08)
+- `2026-06-22` — Training language: inglese (Q41); piattaforma: Teams/SharePoint (Q42)
+- `2026-06-22` — Dealer Champions per adozione territoriale: **non fattibile** — sostituire con ICT Team esterno (Q39)
+- `2026-06-22` — Self-Service Portal cliente: **in scope Wave 1**, UI standard Odoo + branding Piaggio (Q27)
+- `2026-06-22` — Telematics: solo dati selettivi (health alerts, odometer, service triggers) — no real-time (Q30)
+- `2026-06-22` — UX/UI: standard product interface con customizzazione limitata a branding e journey (Q33)
 
 ---
 
 ## Punti aperti
 
-- [ ] Q01 — Hosting: Odoo.sh vs Azure Piaggio → blocca architettura e costi
+- [ ] Q01 — Hosting: Odoo.sh vs Azure Piaggio → blocca architettura; proposta tecnica ha già scelto Azure (**discrepanza**)
 - [ ] Q11 — Warranty approval levels (quanti livelli, ruoli) → blocca design workflow warranty
+- [ ] Q25 — Service scheduling: da confermare con team service PVPL
 - [ ] Q28 — System of Record ownership (customer, product, orders) → blocca BBP e integrations
+- [ ] Q29 — Mobile native/offline → da valutare in fase successiva (escluso dalla proposta ma richiesto da RFP — **discrepanza**)
 - [ ] Q32 — SLA infrastruttura uptime → blocca design HA/DR
 - [ ] Q34/Q35 — Numero PO/KU/EU per change management → blocca piano training
-- [ ] Q38–Q44 — Training strategy → aperte, da sollecitare prima di finalizzare offerta
-- [ ] Q45 — EV-related checks su ordine → blocca design modulo vendite EV
+- [ ] Q44 — Training third-party actors: riformulare la domanda con esempi (PVPL non ha capito)
+- [ ] Q45 — EV-related checks: riformulare la domanda con esempi concreti (PVPL non ha capito)
 - [ ] Chiarire con Odoo modello licenza: named (~42.700) vs concurrent (~4.000)
+- [ ] Allineare sizing proposta tecnica (3.200 utenti dichiarati) con dati PVPL (42.700 nominali) — **discrepanza critica**
+- [ ] Riscrivere Phase 2 ADOPTION per sostituire Dealer Champions con ICT Team esterno (Q39)
 - [ ] Definire policy rollout dealer (cluster geografici, sequenza)
 - [ ] Progettare VIN transfer protocol per coesistenza cross-system
 - [ ] Ingaggiare vendor legacy per estrazione CDMS SQL Server (no export format — KPMG Q-14)
 - [ ] Confermare unicità claim ID in SAP PWM per bloccare duplicati cross-system
+- [ ] Compilare assumption/exclusion Training e Change Management nella proposta (oggi vuote)
 
 ---
 
@@ -108,4 +123,4 @@ Serve come base di input per l'Analisi Funzionale (`/functional-analysis`).
 
 ---
 
-*Ultimo aggiornamento: 2026-06-22*
+*Ultimo aggiornamento: 2026-06-22 — aggiunto v2 Q&A PVPL + analisi proposta tecnica WIP*

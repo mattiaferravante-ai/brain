@@ -1,5 +1,5 @@
 # PVPL India — CDMS Project Notes
-> Odoo Functional Consultant Reference | Avvale S.p.A. | Last updated: 2026-06-22
+> Odoo Functional Consultant Reference | Avvale S.p.A. | Last updated: 2026-06-22 — v2 Q&A PVPL + analisi proposta tecnica WIP
 >
 > **Fonti Q&A**: RFP Q&A AVVALE (`CDMS_India_Q&A-v2.xlsx`) + Q&A "Set 1" altro fornitore **KPMG** (`CONFIDENTIAL - ICT_INTERNATIONAL_PVPL_CDMS QA_2026_05_15_v1.xlsx`, domande 15-May, risposte PVPL 27-May-2026).
 
@@ -309,24 +309,45 @@ Questo è il rischio operativo principale della fase di go-live. Quando alcuni d
 
 ## 6. Q&A — Risposte Chiave Ricevute
 
+> Fonti: `CDMS_India_Q&A-v2.xlsx` (set originale) + `2026_PiaggioCSpA_RFP_CDMS-India_Quesiti-AVVALE_MM-RISPOSTE PIAGGIO-v2.xlsx` (risposte aggiornate 2026)
+
 | ID | Area | Risposta PVPL | Impatto |
 |---|---|---|---|
-| Q01 | Hosting | Odoo.sh **o** Azure Piaggio | Decisione architetturale da chiudere subito — impatta sizing e costi |
-| Q02 | Volumi | 3.500–4.000 concurrent peak | Sizing critico per Odoo.sh |
-| Q03 | Migration | 3,5 TB DB, 8 anni storico, cleansing obbligatorio | Effort elevato, team dedicato |
-| Q05 | Tally | TallyPrime 6.x, 7.0 + ERP 9, via web service custom | Bridge già esistente — da replicare/migliorare |
-| Q06 | KeyTech | Dismissione in 2-3 anni, no integrazione nel progetto | Semplificazione scope |
-| Q09 | Inter-dealer | ~1.500/mese, approvazioni richieste | Workflow complesso, critico in coesistenza |
+| Q01 | Hosting | Odoo.sh **o** Azure Piaggio (come Dealer Websites) — ancora aperto | Decisione architetturale da chiudere subito — impatta sizing e costi |
+| Q02 | Volumi | 3.500–4.000 concurrent peak; 2.000–2.500 normal; +35-40% ultimi 2 gg mese | Sizing critico per Odoo.sh |
+| Q03 | Migration | ~2 TB da migrare, 3,5 TB totale, 8 anni storico (da validare con Legal), cleansing obbligatorio, storico eccedente in archivio read-only | Effort elevato, team dedicato |
+| Q05 | Tally | TallyPrime 6.x, 7.0 + ERP 9, via web service custom (no API native) | Bridge già esistente — da replicare/migliorare |
+| Q06 | KeyTech | Dismissione in 2-3 anni, **no integrazione** nel progetto; futura integrazione con nuova piattaforma | Semplificazione scope |
+| Q07 | AI Warranty Fraud | **Nessun dataset storico** di frodi disponibile | AI fraud detection = solo approccio rule-based, no ML reale |
+| Q08 | Predictive Maintenance | **Low priority**; perimetro troppo ampio — valutare in Wave 2 | Rimandato a Wave 2 |
+| Q09 | Inter-dealer | ~1.500/mese, approvazioni richieste (inter-dealer + claim) | Workflow complesso, critico in coesistenza |
 | Q10 | Warranty | SAP PWM (S/4) sarà la soluzione per India | Integrazione SAP obbligatoria per warranty |
 | Q12 | Spare VOR | Priority alta per warranty/recall orders | Logica di prioritizzazione da implementare |
-| Q13 | SOR | Ripetizione automatica 2 mesi/trimestre, da estendere a CV | Automazione + rischio duplicazione in cutover |
+| Q13 | SOR | Ripetizione automatica 2 mesi/trimestre + email a dealer e team; da estendere a CV | Automazione + rischio duplicazione in cutover |
 | Q14 | Spare TAT | 90 giorni per discrepancy claims | SLA da configurare |
 | Q15 | Foto damaged | **Obbligatorie** | Campo mandatory nel form |
-| Q17 | Sub-dealer | Tipicamente 1 dealer → many sub-dealer | Hierarchy semplice in Odoo |
+| Q17 | Sub-dealer | Tipicamente 1 dealer → many sub-dealer (casi multi-dealer rarissimi) | Hierarchy semplice in Odoo |
 | Q18 | VIN tracking | **A livello VIN** (non batch) | Tracking granulare obbligatorio |
-| Q19 | POD | Upload da **trasportatori** | Accesso portale/app per transporters |
+| Q19 | POD | Upload da **trasportatori** (non da PVPL) | Accesso portale/app per transporters |
+| Q20 | PDI transport damage | **No trigger automatico** claim/notifica al transporter — potrebbe essere un'opzione futura | Nessuna automazione baseline; eventuale Wave 2 |
+| Q21 | Customer notifications | **Tutti e 3 i canali**: SMS + email + mobile push | Multi-channel obbligatorio — dipendenza infrastruttura |
 | Q22 | Credit | Sync **periodica** (non real-time) da SAP | Frequenza sync da definire |
+| Q24 | Job card invoicing | **Conferma dealer richiesta** prima di fatturare i ricambi nella service invoice | Nessuna auto-billing — step di conferma obbligatorio |
+| Q25 | Service scheduling | Approccio proposto OK, ma **da confermare con team service** | Non chiuso — dipendenza da stakeholder service |
 | Q26 | E-commerce | Ordini **solo da BM/CDMS**, no da piattaforma esterna | Semplificazione scope integrazione |
+| Q27 | Self-Service Portal | **In scope**. Standard UI framework + branding Piaggio + mobile-first + integrazione API real-time backend | UI standard con customizzazione brand; Wave 1 |
+| Q29 | Mobile app | Da valutare in una fase successiva dettagliata | **Ancora aperto** — offline e native non definiti |
+| Q30 | Telematics | Solo dati selettivi: health alerts, odometer, service triggers, notifiche cliente — **no integrazione real-time** legacy | Feed limitato e filtrato; no overhead real-time |
+| Q33 | UX/UI | Standard product interface, customizzazione limitata e controllata (branding, journey), mobile-first, navigazione semplice | Nessun custom frontend design; Odoo standard + brand |
+| Q36 | Training method | Train-the-Trainer per interni PVPL; **ICT Team esterno** (non dealer champions) per distribuzione sul territorio | Modello diverso da quanto proposto — vedi sezione discrepanze |
+| Q38 | Training approach | Approccio proposto OK; **ICT Team esterno** può essere coinvolto | Conferma con variante ICT team |
+| Q39 | Dealer Champions feasibility | **NON FATTIBILE**. "The idea could be to train the ICT Team composed by external people to perform this activity" | 🔴 Discrepanza critica con la proposta tecnica — vedi sezione 11 |
+| Q40 | Helpdesk post go-live | **No**, non gestito interamente da P&C | Helpdesk condiviso Avvale + PVPL; modello da definire |
+| Q41 | Training language | **Inglese** | Materiali in inglese; nessuna localizzazione richiesta in questa fase |
+| Q42 | Training platform | **Teams / SharePoint** OK | Nessuna piattaforma dedicata richiesta |
+| Q43 | User profiles per training | Da definire in una fase successiva | Aperto — impossibile stimare ora |
+| Q44 | Third-party actors training | "Question not clear" | ⚠️ PVPL non ha capito la domanda — da riformulare |
+| Q45 | EV-related checks | "Question not clear" | ⚠️ PVPL non ha capito la domanda — da riformulare con esempio concreto |
 
 ### 6.1 Q&A altro fornitore (KPMG — Set 1, risposte PVPL 27-May-2026)
 
@@ -345,15 +366,18 @@ Questo è il rischio operativo principale della fase di go-live. Quando alcuni d
 
 ## 7. Q&A — Risposte Ancora Mancanti / Aperte Critiche
 
-| ID | Area | Perché è critica |
-|---|---|---|
-| Q01 | Hosting | Blocca architettura e contratto infrastruttura |
-| Q11 | Warranty approval levels | Blocca design workflow warranty |
-| Q28 | System of Record ownership | Blocca design integrations e BBP |
-| Q32 | SLA infrastruttura | Blocca architettura HA/DR |
-| Q34/Q35 | Change Management — PO/KU/EU numbers | Blocca piano training |
-| Q38–Q44 | Training strategy | Aperte — da sollecitare prima di finalizzare offerta |
-| Q45 | EV checks | Blocca design modulo vendite EV |
+| ID | Area | Perché è critica | Stato |
+|---|---|---|---|
+| Q01 | Hosting | Blocca architettura e contratto infrastruttura | La proposta tecnica ha già scelto Azure/AKS — vedi discrepanze |
+| Q11 | Warranty approval levels | Blocca design workflow warranty | Da definire in BBP |
+| Q25 | Service scheduling automation | Da confermare con team service | Parzialmente aperto |
+| Q28 | System of Record ownership | Blocca design integrations e BBP | Da definire in BBP |
+| Q29 | Mobile app (native/offline) | Blocca architettura mobile e effort | Da valutare in fase successiva |
+| Q32 | SLA infrastruttura | Blocca architettura HA/DR | Non ancora definita |
+| Q34/Q35 | Change Management — PO/KU/EU numbers | Blocca piano training | Non ancora chiariti |
+| Q43 | User profiles per training | Blocca dimensionamento training | Da definire in fase successiva |
+| Q44 | Third-party training scope | PVPL non ha capito la domanda — riformulare | Da re-inviare |
+| Q45 | EV-related checks | PVPL non ha capito la domanda — riformulare con esempi concreti | Da re-inviare |
 
 ---
 
@@ -390,6 +414,91 @@ Questo è il rischio operativo principale della fase di go-live. Quando alcuni d
 | Inter-dealer approval matrix | Custom | Workflow approval Odoo adattabile ma richiede design |
 | Warranty → SAP PWM | Integration (E) | API call a SAP PWM per eligibility check |
 | Telematics feed | Integration (E) | Dati selettivi: odometer, health alerts, service triggers |
+
+---
+
+## 11. Discrepanze — Proposta Tecnica vs Q&A PVPL
+
+> Aggiornato dopo revisione di `01 Avvale - Piaggio - CDMs - RFP - Technnical Proposal V1_WIP.docx` e `2026_PiaggioCSpA_RFP_CDMS-India_Quesiti-AVVALE_MM-RISPOSTE PIAGGIO-v2.xlsx`
+
+### 🔴 CRITICO — Sizing utenti
+
+**Proposta tecnica** (sezione Target Architecture): "approximately 1,600 dealers and sub-dealers, with an average of two named users per dealer (in the order of 3,200 dealer-side users)"
+
+**Dati confermati PVPL** (Q-16 KPMG): ~41.880 utenti nominali dealer + 834 PVPL = **~42.700 utenti nominali totali**
+
+Il delta è 13x. Anche contando solo i concurrent (3.500–4.000), il sizing nella proposta è dichiaratamente sottostimato rispetto agli utenti nominali confermati. Questo impatta direttamente:
+- Modello di licenza Odoo (named vs concurrent — ancora da chiarire con Odoo)
+- Costi infrastrutturali (dimensionamento Azure/database)
+- Credibilità della proposta se PVPL confronta i numeri
+
+> **Azione**: allineare i numeri nella proposta con quelli confermati da PVPL. Se si intende ragionare su concurrent users, dichiararlo esplicitamente e citare il dato PVPL.
+
+---
+
+### 🔴 CRITICO — Dealer Champions = modello rifiutato da PVPL
+
+**Proposta tecnica** (Phase 2 ADOPTION): prevede 10 Hub Dealer Champions + 100 Local Dealer Champions come motore dell'adozione sul territorio. L'intera architettura della fase 2 si basa su questo modello.
+
+**Risposta PVPL (Q39)**: "Not feasible. The idea could be to train the ICT Team composed by external people to perform this activity"
+
+PVPL ha esplicitamente rifiutato il modello Dealer Champion per l'adozione territoriale. La motivazione implicita è l'impatto sul business del dealer e l'alto turnover del personale. In sostituzione indica un **ICT Team esterno** come rete di supporto locale.
+
+> **Azione**: riscrivere Phase 2 / ADOPTION sostituendo il ruolo dei Dealer Champions con un modello basato su ICT Team esterno formato da Avvale. I 10 Hub Champions nella Virtual Classroom (Q38) sembrano ancora accettabili per la fase CORE, ma non possono essere il veicolo dell'adozione territoriale scalabile.
+
+---
+
+### 🟠 IMPORTANTE — Hosting: decisione assunta unilateralmente
+
+**Proposta tecnica** (sezione Target Architecture): ha già commesso la scelta di **Azure / AKS** come deployment model, con dettaglio completo su AKS, PostgreSQL managed, Front Door, ExpressRoute, ecc.
+
+**Q&A (Q01)**: ancora aperto — "2 options to be evaluated: Odoo.sh, Piaggio's infra on Azure"
+
+La proposta anticipa una decisione che formalmente non è ancora stata presa. Il rischio è che Piaggio percepisca la scelta come imposta senza consultazione, oppure che la decisione definitiva ricada su Odoo.sh, rendendo l'architettura proposta non applicabile.
+
+> **Azione**: o si allinea con PVPL sulla scelta Azure prima della consegna (raccomandata), oppure si presenta l'architettura Azure come **opzione raccomandata** con analisi comparativa vs Odoo.sh, lasciando la decisione a PVPL.
+
+---
+
+### 🟠 IMPORTANTE — Mobile/offline: escluso dalla proposta ma richiesto dall'RFP
+
+**Proposta tecnica** (Exclusions): "Native mobile application development for iOS or Android is excluded from the proposed scope"; "Offline capabilities, advanced synchronization logic, mobile-first capabilities... excluded from the baseline scope"
+
+**RFP + Q&A**: il RFP richiede esplicitamente spare parts app, service app con supporto **offline**, self-service portal cliente. KPMG Q-18 conferma che PLMS va rifatto da zero. Q27 conferma il self-service portal in scope Wave 1.
+
+C'è un gap tra cosa è scritto nelle exclusions e cosa l'RFP richiede. Se queste exclusions passano inosservate ora, emergeranno in negoziazione come scope dispute.
+
+> **Azione**: chiarire in proposta che il mobile è "in scope come integrazione con app gestite da PVPL/terzi" o definire un work package separato per l'app mobile, con effort stimato. Non si può escludere silenziosamente qualcosa che l'RFP richiede esplicitamente.
+
+---
+
+### 🟡 MINORE — Oracle/D2K descritto come "in dismissione"
+
+**Proposta tecnica** (Integration layer): "The legacy Oracle/D2K system is in dismission and is retained only for residual analytics and settlement feeds during transition"
+
+**Realtà dai Q&A**: Oracle/D2K è la sorgente attiva per Warranty CV, PDI, FSC — contiene dati critici che devono essere migrati in Odoo + SAP PWM. Non è "in dismissione" in senso operativo durante il progetto; è una sorgente di migrazione con voli complessi (flussi .net/dblink).
+
+> **Azione**: correggere la descrizione in proposta. Oracle/D2K è una sorgente legacy primaria per la migrazione di warranty/PDI/FSC CV, non un sistema già superato. La dismissione è l'obiettivo finale, non il punto di partenza.
+
+---
+
+### 🟡 MINORE — E-catalogue: integrazione proposta vs no-integrazione PVPL
+
+**Proposta tecnica** (Spare Parts): "The e-catalogue requirement is treated as an external integration capability... the CDMS will integrate with the relevant catalogue components"
+
+**Q06 PVPL**: KeyTech verrà dismessa in 2-3 anni; "initial willing is no integration between new CDMS and KeyTech"
+
+La proposta accenna a un'integrazione e-catalogue che PVPL ha già escluso nel periodo progetto. L'integrazione futura sarà con la nuova piattaforma, non con KeyTech.
+
+> **Azione**: allineare il testo sulla e-catalogue con la risposta Q06: nessuna integrazione con KeyTech nel perimetro del progetto; futura integrazione con nuova piattaforma è out of scope attuale.
+
+---
+
+### 🟡 MINORE — Training assumptions/exclusions vuote
+
+**Proposta tecnica** (sezioni Training e Change Management): i paragrafi Assumptions e Exclusions contengono placeholder ("Assunzione 1", "Assuzione 2 etc", "Esclusione 1") non ancora compilati.
+
+> **Azione**: compilare le assumption/exclusion di Training e Change Management prima della consegna, usando le risposte Q36-Q43 come base.
 
 ---
 
