@@ -112,3 +112,7 @@ Python, SQL, XML, HTML, MongoDB, PostgreSQL, Odoo, PowerBI, Pacchetto Office, ma
 - Base: Italia
 - Progetti attivi: Croazia (FINA e-invoicing), multi-paese EU
 - Lingua lavoro: Italiano / Inglese
+
+---
+
+**Vedi anche:** [[PERSONAL_PROFILE]] | [[WORK_WORKFLOW]]

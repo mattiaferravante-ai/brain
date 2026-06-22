@@ -11,6 +11,8 @@ Altri clienti/progetti vanno in `Work/Clients/NomeProgetto/`.
 
 Usa `/new-project Avvale/projects NomeProgetto` per creare la struttura completa.
 
+Template di riferimento: [[PROJECT_SUMMARY_template]] | [[TEMPLATE_MeetingNotes]]
+
 ```
 NomeProgetto/
 ├── README.md               ← stack, contatti, URL ambienti, stato progetto, ultimo meeting

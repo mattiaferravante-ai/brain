@@ -75,3 +75,5 @@ Brain/
 
 Questo Brain è usato come contesto per Claude (Cowork mode).
 I due workflow sopra si applicano in base al contesto del progetto — **non sono intercambiabili**.
+
+**Profili:** [[PROFESSIONAL_PROFILE]] | [[PERSONAL_PROFILE]]

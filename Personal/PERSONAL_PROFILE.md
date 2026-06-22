@@ -66,9 +66,13 @@ Percorso scolastico non lineare: bocciato in 1ª al liceo scientifico, cambiato 
 ## Hobby e tempo libero
 
 - **PlayStation 5** — gaming principale nel tempo libero
-- **Sviluppo software con Claude AI** — progetto principale: HomeBase (vedi `Dev/HomeBase.md`)
+- **Sviluppo software con Claude AI** — progetto principale: [[HomeBase]]
 - Videogiochi fin da piccolo (vedi background)
 
 ## Certificazioni
 
 - Odoo 19 Functional ✓
+
+---
+
+**Vedi anche:** [[PROFESSIONAL_PROFILE]] | [[2026|Obiettivi 2026]]

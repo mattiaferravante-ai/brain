@@ -3,7 +3,9 @@
 **Cliente:** Piaggio Vehicles Pvt. Ltd. (PVPL) — India  
 **Odoo:** Enterprise (versione TBD)  
 **Tipo:** Nuova implementazione — cDMS (Customer Dealer Management System)  
-**Inizio:** Da definire (gara in corso) — **Durata stimata:** Da definire (Wave 1 + Wave 2)
+**Inizio:** Da definire (gara in corso) — **Durata stimata:** Da definire (Wave 1 + Wave 2)  
+**Progetto correlato (stesso cliente):** [[piaggio_dealer_website/PROJECT_SUMMARY|Piaggio Dealer Website]]  
+**Consulente:** [[PROFESSIONAL_PROFILE|Mattia Ferravante]]
 
 Documento cumulativo aggiornato automaticamente dopo ogni meeting.
 Serve come base di input per l'Analisi Funzionale (`/functional-analysis`).
@@ -101,7 +103,7 @@ Serve come base di input per l'Analisi Funzionale (`/functional-analysis`).
 - **Aree alto rischio**: Tally Bridge, Job Card/Service (no modulo Odoo aderente al 100%), Warranty (SAP PWM non ancora definito), Data Migration 3,5 TB, dipendenza vendor legacy
 - **FY change (Q-26)**: sequenza custom `ir.sequence` per outlet, schema DI/DIEV+YY+outlet+seriale, reset Aprile post-consenso dealer, finestra cross-FY (registrazione entro 31-March)
 - **Job Card**: valutare se estendere `mrp_repair` (effort C) o sviluppare modulo custom dedicato (effort D)
-- **Coesistenza**: 9 punti critici identificati — vedere `CDMS_Piaggio_Project_Notes.md` §5
+- **Coesistenza**: 9 punti critici identificati — vedere [[CDMS_Piaggio_Project_Notes]] §5
 - **Hosting**: 4.000 concurrent users su Odoo.sh è al limite architetturale → valutare Azure
 
 ---

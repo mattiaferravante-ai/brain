@@ -4,7 +4,8 @@
 **Odoo:** 19.0 (Enterprise)  
 **Tipo:** Nuova implementazione  
 **Modulo custom:** `tea_quotations` — Schema versione `19.0.1.4.0`  
-**Inizio:** marzo 2026 — **Stato:** UAT in fase di chiusura
+**Inizio:** marzo 2026 — **Stato:** UAT in fase di chiusura  
+**Consulente:** [[PROFESSIONAL_PROFILE|Mattia Ferravante]]
 
 Documento cumulativo aggiornato dopo ogni meeting e caricamento documenti.
 Serve come base di input per l'Analisi Funzionale (`/functional-analysis`).

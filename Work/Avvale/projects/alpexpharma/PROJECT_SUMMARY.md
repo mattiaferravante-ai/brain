@@ -3,7 +3,8 @@
 **Cliente:** Alpexpharma  
 **Odoo:** 19 (Enterprise)  
 **Tipo:** Nuova implementazione  
-**Inizio:** 2026-06-09 — **Durata stimata:** ~1 anno
+**Inizio:** 2026-06-09 — **Durata stimata:** ~1 anno  
+**Consulente:** [[PROFESSIONAL_PROFILE|Mattia Ferravante]]
 
 Documento cumulativo aggiornato automaticamente dopo ogni meeting.
 Serve come base di input per l'Analisi Funzionale (`/functional-analysis`).

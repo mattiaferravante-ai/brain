@@ -3,7 +3,9 @@
 **Cliente:** Piaggio S.p.A.  
 **Odoo:** 19 (Enterprise)  
 **Tipo:** Nuova implementazione sito web per rete dealer  
-**Inizio:** 2026-06-08 — **Durata stimata:** ~1 anno (da confermare)
+**Inizio:** 2026-06-08 — **Durata stimata:** ~1 anno (da confermare)  
+**Progetto correlato (stesso cliente):** [[piaggio_cdms_india/PROJECT_SUMMARY|Piaggio cDMS India]]  
+**Consulente:** [[PROFESSIONAL_PROFILE|Mattia Ferravante]]
 
 Documento cumulativo aggiornato automaticamente dopo ogni meeting.
 Serve come base di input per l'Analisi Funzionale (`/functional-analysis`).

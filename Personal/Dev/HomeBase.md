@@ -75,3 +75,7 @@
 - Volume `~/homebase-data` persiste SQLite tra deploy
 - Cache-busting automatico CSS/JS tramite build timestamp
 - Il modulo Brain monta `~/Brain` come volume Docker (`~/Brain:/app/brain-data`)
+
+---
+
+**Vedi anche:** [[2026|Obiettivi 2026]] | [[HomeBase/PROJECT_WORKFLOW|Workflow HomeBase]]
