@@ -36,6 +36,17 @@ Questo vale anche per file generati (CV, AF, UAT) — aggiungerli sempre all'ind
 
 ## Skill obbligatorie per contesto Work
 
+### Avvale Brand Identity (PREREQUISITO per tutti i documenti)
+**Trigger:** ogni volta che stai per generare un documento, file o materiale visivo che rappresenta Avvale o un cliente Avvale — incluso qualsiasi `.docx`, `.xlsx`, `.pptx`, `.pdf`, immagine, CV, report, one-pager, presentazione. Trigger anche con: "applica il brand", "metti il logo Avvale", "usa i nostri colori", "rendilo brandizzato", "crea una presentazione Avvale".  
+**Skill da usare:** `avvale-brand`  
+**Come usarla:** caricare PRIMA di qualunque skill di produzione. Non genera il deliverable — fornisce design tokens (colori, font Archivo, path logo/asset) e linee guida da passare alla skill di produzione successiva.  
+**Pipeline obbligatoria:**
+1. Carica `avvale-brand` → leggi `tokens.json` + `references/<formato>_brand.md`
+2. Poi esegui la skill di produzione (es. `functional-analysis`, `uat-testbook`, ecc.) applicando i token
+3. A fine lavoro: verifica contro `references/qa_checklist.md`
+
+> **Nota:** questa skill è prerequisito implicito di `functional-analysis` e `uat-testbook` — caricala sempre prima di queste due.
+
 ### Analisi Funzionale
 **Trigger:** ogni volta che si parla di AF, analisi funzionale, gap analysis, AS-IS/TO-BE, specifiche funzionali, documento di analisi per un modulo Odoo.  
 **Skill da usare:** `functional-analysis`  

@@ -95,10 +95,10 @@ sezione non è applicabile, inserire la nota: *"N/A – non in scope per questa
 fase."*
 
 ### 1. Copertina (non numerata)
-- Logo Avvale (placeholder se non disponibile)
+- Logo Avvale — path da skill `avvale-brand` → `tokens.logo.paths.pos` (`assets/logo/logo_pos.png`)
 - Titolo: `[Cliente] – [Area] – [Modulo Odoo] – Analisi Funzionale`
 - Data, versione, classificazione (Public / Internal / Confidential)
-- Footer Avvale standard (vedi `references/avvale-footer.md`)
+- Footer Avvale standard → vedi skill `avvale-brand` → `references/docx_brand.md`
 
 ### 2. Registro Versioni del Documento
 
@@ -208,27 +208,31 @@ Tabella delle questioni aperte, decisioni pendenti o informazioni mancanti.
 
 ## Istruzioni per la generazione .docx
 
+> **Prerequisito brand**: caricare skill `avvale-brand` prima di generare il .docx.
+> Leggere `tokens.json` e `references/docx_brand.md` per palette, font, logo e footer.
+
 1. Leggere prima la skill `docx` per le istruzioni tecniche di generazione
 2. Usare **A4** come formato pagina (11906 × 16838 DXA)
 3. Margini: **1440 DXA** (≈ 2,54 cm) su tutti i lati
-4. Font: **Arial** come font di sistema
-5. Palette colori Avvale → `references/avvale-style.md`
+4. Font: **Archivo** (da `avvale-brand` tokens) — fallback: Inter → Helvetica → Arial
+5. Palette colori → skill `avvale-brand` → `tokens.json` (colore signature: Celadon Green `#248B7E`)
 6. Intestazione: titolo documento + numero revisione (destra) | logo (sinistra),
-   bordo inferiore `#3B9408`
-7. Footer: copyright Avvale + dati societari → `references/avvale-footer.md`
+   bordo inferiore Celadon Green `#248B7E` (da `avvale-brand` tokens)
+7. Footer: copyright Avvale + dati societari → skill `avvale-brand` → `references/docx_brand.md`
 8. TOC automatico su pagina separata dopo Registro Versioni
 9. Numerazione pagine: footer centrato, formato "Pagina X di Y"
 
 ### Tabelle standard
-- Header row: sfondo `#3B9408` (verde Avvale), testo bianco bold
-- Righe alternate: `#D9EAD3` / bianco
+- Header row: sfondo Celadon Green `#248B7E` (da `avvale-brand` tokens), testo bianco bold
+- Righe alternate: tint chiaro del colore signature / bianco (vedi `avvale-brand` tokens)
 - Bordi: `#CCCCCC`, `BorderStyle.SINGLE`, size 1
 - Sempre `ShadingType.CLEAR` (mai SOLID)
 
 ### Heading levels
-- H1 → sezioni principali (AS-IS, TO-BE, Gap Analysis, …) — Arial 16pt bold `#2D7206`
-- H2 → sotto-sezioni (es. "Gestione Lead", "Anagrafica CER") — Arial 13pt bold `#3B9408`
-- H3 → dettagli (es. "Campi obbligatori", "Regole di validazione") — Arial 11pt bold `#595959`
+Usare font Archivo e colori da `avvale-brand` tokens (`references/docx_brand.md`):
+- H1 → sezioni principali (AS-IS, TO-BE, Gap Analysis, …) — Archivo 16pt bold, colore primario
+- H2 → sotto-sezioni (es. "Gestione Lead", "Anagrafica CER") — Archivo 13pt bold, colore secondario
+- H3 → dettagli (es. "Campi obbligatori", "Regole di validazione") — Archivo 11pt bold `#595959`
 
 ---
 
@@ -259,10 +263,9 @@ esplicitamente** in una nota all'inizio del documento:
 Leggere i reference solo quando servono per il task corrente, non tutti per
 default:
 
-- `references/avvale-style.md` → palette colori, tipografia, esempi heading,
-  spacing paragrafi, stili docx-js
-- `references/avvale-footer.md` → testo footer societario standard +
-  implementazione docx-js header/footer
+- skill `avvale-brand` → fonte unica per palette colori, font Archivo, logo,
+  footer societario e regole di composizione .docx (leggere `tokens.json` +
+  `references/docx_brand.md` prima di generare)
 - `references/section-templates.md` → blocchi di testo riutilizzabili per
   ogni sezione ricorrente (registro versioni, AS-IS, TO-BE, processo, gap,
   open points, nota di assunzione)

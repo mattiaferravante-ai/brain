@@ -1,0 +1,33 @@
+{
+  "primary": {
+    "pure_white":     {"hex": "#FFFFFF", "rgb": [255, 255, 255], "cmyk": [0, 0, 0, 0]},
+    "raisin_black":   {"hex": "#231C1D", "rgb": [35, 28, 29],    "cmyk": [70, 69, 59, 80]},
+    "celadon_green":  {"hex": "#248B7E", "rgb": [36, 139, 126],  "cmyk": [80, 23, 54, 7], "signature": true},
+    "keppel":         {"hex": "#47B1A3", "rgb": [71, 177, 163],  "cmyk": [69, 5, 43, 0]},
+    "green_ryb":      {"hex": "#5AB031", "rgb": [90, 176, 49],   "cmyk": [68, 0, 100, 0]},
+    "pistachio":      {"hex": "#AACE7C", "rgb": [170, 206, 124], "cmyk": [41, 0, 64, 0]}
+  },
+  "secondary": {
+    "acqua_blue":      {"hex": "#989FCE", "rgb": [152, 159, 206]},
+    "almond":          {"hex": "#FFECD1", "rgb": [255, 236, 209]},
+    "lilac_luster":    {"hex": "#B79FAD", "rgb": [183, 159, 173]},
+    "english_violet":  {"hex": "#574B60", "rgb": [87, 75, 98]},
+    "red_salsa":       {"hex": "#EB5758", "rgb": [235, 87, 88]},
+    "bittersweet":     {"hex": "#412647", "rgb": [65, 38, 71]},
+    "champagne_pink":  {"hex": "#EADDD6", "rgb": [234, 221, 214]}
+  },
+  "chart_order": [
+    "#248B7E",
+    "#231C1D",
+    "#47B1A3",
+    "#AACE7C",
+    "#989FCE",
+    "#574B60",
+    "#5AB031"
+  ],
+  "neutrals": {
+    "grid_line":   "#E5E5E5",
+    "alt_row":     "#F5F5F5",
+    "muted_text":  "rgba(35,28,29,0.6)"
+  }
+}
