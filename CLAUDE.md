@@ -67,6 +67,11 @@ Questo vale anche per file generati (CV, AF, UAT) — aggiungerli sempre all'ind
 **Skill da usare:** `minute`  
 **Output:** file `.md` in `Work/<progetto>/MeetingNotes/` + aggiornamento `PROJECT_SUMMARY.md` + aggiornamento README progetto
 
+### Manuale Utente
+**Trigger:** ogni volta che si parla di manuale utente, guida operativa, guida end-user, documentazione utente, guida key user, o qualsiasi documento che spiega come usare Odoo a un utente finale. Triggera anche per: "scrivi il manuale per", "prepara la guida utente di", "crea la documentazione utente per", "manuale operativo per".  
+**Skill da usare:** `user-manual`  
+**Output:** file `.docx` salvato in `Work/Clients/NomeProgetto/` o sottocartella dedicata
+
 ### AF Sync (rilettura AF modificata)
 **Trigger:** ogni volta che si parla di "rileggere l'AF", "aggiornare il summary dall'AF", "sincronizzare l'AF", "ho modificato l'AF".  
 **Skill da usare:** `af-sync`  
@@ -99,6 +104,7 @@ Il flusso standard per arrivare all'Analisi Funzionale è:
 | `/new-project` | Brain | Crea struttura cartelle per un nuovo progetto in Work/ |
 | `/minute` | Brain | Genera verbale + action items da trascrizione riunione |
 | `/af-sync [progetto]` | Brain | Rilegge l'AF .docx modificata e sincronizza PROJECT_SUMMARY.md |
+| `/user-manual` | Brain | Genera Manuale Utente .docx per un modulo Odoo |
 
 ---
 
