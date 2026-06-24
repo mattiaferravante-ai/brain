@@ -22,15 +22,16 @@ Prima di creare qualsiasi file, poni queste domande all'utente in un unico messa
 Perfetto, creo il progetto <nome>. Prima dimmi:
 
 1. **Cliente** — ragione sociale o nome breve dell'azienda cliente
-2. **Tipo progetto** — nuova implementazione / migrazione / personalizzazione / supporto continuativo
-3. **Versione Odoo** — es. 16, 17, 18 (Community o Enterprise?)
-4. **Moduli coinvolti** — es. Contabilità, Magazzino, Acquisti, CRM, Produzione...
-5. **Data inizio** — anche approssimativa (es. "giugno 2026")
-6. **Durata stimata** — es. 3 mesi, 6 mesi, ongoing
-7. **PM Avvale** — nome del Project Manager interno
-8. **Referente cliente** — nome e ruolo del referente lato cliente
-9. **Ambienti** — URL prod / staging / dev (anche "da definire")
-10. **Note aggiuntive** — vincoli, dipendenze, contesto utile (opzionale)
+2. **Stato iniziale** — `#bid` (gara in corso, non ancora confermato) o `#active` (progetto avviato)
+3. **Tipo progetto** — nuova implementazione / migrazione / personalizzazione / supporto continuativo
+4. **Versione Odoo** — es. 16, 17, 18 (Community o Enterprise?)
+5. **Moduli coinvolti** — es. Contabilità, Magazzino, Acquisti, CRM, Produzione...
+6. **Data inizio** — anche approssimativa (es. "giugno 2026"); per `#bid` usare "Da definire"
+7. **Durata stimata** — es. 3 mesi, 6 mesi, ongoing; per `#bid` usare "Da definire"
+8. **PM Avvale** — nome del Project Manager interno; per `#bid` usare "Da definire"
+9. **Referente cliente** — nome e ruolo del referente lato cliente
+10. **Ambienti** — URL prod / staging / dev (anche "da definire")
+11. **Note aggiuntive** — vincoli, dipendenze, contesto utile (opzionale)
 ```
 
 Accetta risposte parziali: se l'utente non sa qualcosa, usa `Da definire` come placeholder.
@@ -59,7 +60,7 @@ Usa le risposte dell'onboarding per riempire il README (nessun placeholder vuoto
 
 - **Inizio:** <data inizio>
 - **Durata stimata:** <durata>
-- **Stato:** `#active`
+- **Stato:** `#active`  *(o `#bid` se gara non ancora confermata)*
 
 ## Contatti
 

@@ -86,6 +86,24 @@ Il flusso standard per arrivare all'Analisi Funzionale è:
 
 ---
 
+## Ciclo di vita dei progetti
+
+I progetti Avvale hanno 4 stati. Ogni stato determina la cartella e il tag nel README.
+
+| Tag | Significato | Cartella |
+|-----|-------------|----------|
+| `#bid` | Gara in corso, esito incerto | `Work/Avvale/projects/` |
+| `#active` | In delivery | `Work/Avvale/projects/` |
+| `#closed` | Concluso con successo (go-live avvenuto) | `Work/Avvale/archive/` |
+| `#archived` | Non partito (gara persa o cancellato prima del kick-off) | `Work/Avvale/archive/` |
+
+Transizioni:
+- `#bid` → `#active` : aggiornare il tag nel README del progetto
+- `#bid` → `#archived` : usare `/archive-project <nome>` (sposta in archive/)
+- `#active` → `#closed` : usare `/archive-project <nome>` con motivo "concluso"
+
+---
+
 ## Workflow per contesto
 
 | Contesto | Regole operative |
@@ -105,6 +123,7 @@ Il flusso standard per arrivare all'Analisi Funzionale è:
 | `/minute` | Brain | Genera verbale + action items da trascrizione riunione |
 | `/af-sync [progetto]` | Brain | Rilegge l'AF .docx modificata e sincronizza PROJECT_SUMMARY.md |
 | `/user-manual` | Brain | Genera Manuale Utente .docx per un modulo Odoo |
+| `/archive-project <nome>` | Brain | Archivia un progetto (sposta in archive/, aggiorna indici, committa) |
 
 ---
 
