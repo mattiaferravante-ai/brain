@@ -115,4 +115,4 @@ Python, SQL, XML, HTML, MongoDB, PostgreSQL, Odoo, PowerBI, Pacchetto Office, ma
 
 ---
 
-**Vedi anche:** [[PERSONAL_PROFILE]] | [[WORK_WORKFLOW]]
+**Vedi anche:** [[WORK_WORKFLOW]]

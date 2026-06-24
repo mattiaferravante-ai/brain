@@ -33,28 +33,18 @@ Per usare il Brain in un altro progetto, aprilo con Claude Code ed esegui `/uplo
 ```
 Brain/
 ├── Work/               → Progetti Odoo, clienti, deliverable
-│   ├── Clients/        → Una cartella per cliente/progetto
+│   ├── Avvale/         → Progetti Avvale (projects/ + archive/)
+│   ├── Clients/        → Una cartella per cliente esterno
 │   ├── Templates/      → Template riutilizzabili (AF, UAT, meeting notes)
-│   └── Resources/      → Risorse tecniche generali Odoo/ERP
+│   ├── Skills/         → Skill Claude per produzione deliverable
+│   ├── CV/             → CV aggiornati (IT + EN)
+│   └── PROFESSIONAL_PROFILE.md → Profilo professionale completo
 │
-├── Finance/            → Finanza personale e percorso FIRE
-│   ├── Portfolio/      → Asset allocation, tracking investimenti
-│   ├── FIRE/           → Obiettivi, simulazioni, strategia
-│   ├── Budget/         → Budget mensile/annuale
-│   └── Notes/          → Note su libri, articoli, idee finanziarie
-│
-├── Learning/           → Studio e crescita professionale
-│   ├── Odoo/           → Note tecniche Odoo, moduli, pattern
-│   ├── Tech/           → Python, SQL, Docker, ERP patterns
-│   ├── Books/          → Note da libri letti
-│   └── Courses/        → Note da corsi e certificazioni
-│
-├── Personal/           → Vita personale
-│   ├── Travel/         → Viaggi (Italia, Croazia, etc.)
-│   ├── Goals/          → Obiettivi annuali e trimestrali
-│   └── Journal/        → Journaling periodico
-│
-└── Personal/Dev/PROJECT_WORKFLOW.md → Regole per progetti personali (mini PC)
+└── Learning/           → Studio e crescita professionale
+    ├── Odoo/           → Gotchas, breaking changes, pattern custom — la fonte unica
+    ├── Tech/           → Python, SQL, Docker, ERP patterns
+    ├── Books/          → Note da libri tecnici
+    └── Courses/        → Note da corsi e certificazioni Odoo
 ```
 
 ## Convenzioni
@@ -68,7 +58,6 @@ Brain/
 
 | Contesto | File di riferimento |
 |----------|---------------------|
-| Progetti personali (mini PC) | `Personal/Dev/PROJECT_WORKFLOW.md` |
 | Progetti Odoo / Avvale | `Work/WORK_WORKFLOW.md` |
 
 ## AI Context
@@ -76,4 +65,4 @@ Brain/
 Questo Brain è usato come contesto per Claude (Cowork mode).
 I due workflow sopra si applicano in base al contesto del progetto — **non sono intercambiabili**.
 
-**Profili:** [[PROFESSIONAL_PROFILE]] | [[PERSONAL_PROFILE]]
+**Profilo:** [[PROFESSIONAL_PROFILE]]

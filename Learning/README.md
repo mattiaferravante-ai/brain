@@ -1,19 +1,19 @@
-# 📚 Learning
+# Learning
 
-Note di studio, approfondimenti tecnici e crescita professionale.
+Note tecniche e crescita professionale — focus work/ERP.
 
 ## Sottocartelle
 
-- `Odoo/` — Moduli, pattern, best practice, note su versioni
+- `Odoo/` — Gotchas, breaking changes, pattern architetturali custom — [[Odoo/README|indice]]
 - `Tech/` — Python, SQL, PostgreSQL, Docker, ERP patterns
-- `Books/` — Note e sintesi da libri letti
-- `Courses/` — Note da corsi, webinar, certificazioni
+- `Books/` — Note e sintesi da libri tecnici
+- `Courses/` — Note da corsi, webinar, certificazioni Odoo
 
 ## Convenzioni
 
 - Una nota per argomento/libro/corso
-- Formato: `YYYY-MM-DD_titolo.md`
-- Includere: concetti chiave, esempi pratici, link, TODO di approfondimento
+- Formato: `YYYY-MM-DD_titolo.md` per note datate
+- Ogni gotcha scoperto su un progetto → estratto in `Odoo/` (non lasciarlo nel PROJECT_SUMMARY)
 
 ## Tag
 

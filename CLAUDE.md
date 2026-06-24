@@ -26,7 +26,7 @@ Ad ogni modifica strutturale del Brain (nuovo file, nuova cartella, rimozione, r
 
 1. **Aggiornare il README.md della cartella** interessata con il nuovo file/cartella
 2. **Aggiornare `README.md` radice** se cambia la struttura di primo livello
-3. **Aggiornare i tag** del file nuovo per coerenza con la cartella (`#personal`, `#work`, ecc.)
+3. **Aggiornare i tag** del file nuovo per coerenza con la cartella (`#work`, `#learning`, ecc.)
 4. **Aggiornare i wikilink Obsidian** (`[[NomeFile]]`) in tutti i file che referenziano la struttura modificata
 5. **Non lasciare mai file orfani** — ogni file deve comparire in almeno un README o indice
 
@@ -109,7 +109,6 @@ Transizioni:
 | Contesto | Regole operative |
 |----------|-----------------|
 | Progetti Odoo / Avvale | `Work/WORK_WORKFLOW.md` |
-| Progetti personali (mini PC) | `Personal/Dev/PROJECT_WORKFLOW.md` |
 
 ---
 
@@ -131,8 +130,6 @@ Transizioni:
 
 ```
 Brain/
-├── Work/           → Progetti Odoo, clienti, deliverable, template
-├── Finance/        → Portafoglio, FIRE, budget
-├── Learning/       → Note tecniche, libri, corsi
-└── Personal/       → Viaggi, obiettivi, journaling, dev personale
+├── Work/           → Progetti Odoo, clienti, deliverable, template, skill
+└── Learning/       → Note tecniche Odoo, libri, corsi
 ```
