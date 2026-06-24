@@ -9,6 +9,7 @@ Progetti attivi e gare in corso. I progetti archiviati o conclusi stanno in `../
 | [[alpexpharma]] | Alpexpharma | `#active` | 2026-06-09 |
 | [[piaggio_dealer_website]] | Piaggio S.p.A. | `#active` | 2026-06-08 |
 | [[tea_contratti]] | TEA Ambiente e Ecologia | `#active` `#uat` | 2026-03 |
+| [[coswell_polonia]] | Coswell Polonia | `#active` `#standby` | Da definire |
 
 ## Gare in corso
 
