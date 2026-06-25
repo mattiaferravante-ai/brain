@@ -8,7 +8,16 @@
       "mcp__claude_ai_Notion__notion-search",
       "mcp__claude_ai_Notion__notion-fetch",
       "Bash(git push *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(C:/rag/Scripts/python.exe *)",
+      "PowerShell(& C:\\rag\\Scripts\\python.exe *)",
+      "PowerShell(& C:\\rag\\Scripts\\pip.exe *)"
     ]
-  }
+  },
+  "env": {
+    "VIRTUAL_ENV": "C:\\rag",
+    "PYTHONIOENCODING": "utf-8",
+    "HF_HUB_DISABLE_SYMLINKS_WARNING": "1"
+  },
+  "hooks": {}
 }

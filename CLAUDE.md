@@ -126,6 +126,23 @@ Transizioni:
 
 ---
 
+## RAG locale (Brain search)
+
+Quando l'utente chiede di cercare nel Brain, usare il RAG, o fare una ricerca semantica, eseguire:
+
+```powershell
+& C:\rag\Scripts\python.exe "C:\Users\MattiaFerravante\OneDrive - Avvale S.p.A\Documenti\Brain\Tools\brain_rag\query.py" "la domanda" --context
+```
+
+- Usare `--context` per ottenere output formattato da iniettare come contesto
+- Usare `--top N` per più risultati (default: 5)
+- Usare `--filter section=Work` per filtrare per sezione
+- Per aggiornare l'indice dopo modifiche ai file: `& C:\rag\Scripts\python.exe Tools\brain_rag\indexer.py`
+- Per re-indicizzazione completa: aggiungere `--full`
+- Il venv Python è in `C:\rag` — usare sempre `C:\rag\Scripts\python.exe` come interprete
+
+---
+
 ## Struttura Brain
 
 ```

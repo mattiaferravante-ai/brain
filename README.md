@@ -40,6 +40,9 @@ Brain/
 │   ├── CV/             → CV aggiornati (IT + EN)
 │   └── PROFESSIONAL_PROFILE.md → Profilo professionale completo
 │
+├── Tools/              → Script e automazioni locali
+│   └── brain_rag/      → RAG locale (embedding + ChromaDB)
+│
 └── Learning/           → Studio e crescita professionale
     ├── Odoo/           → Gotchas, breaking changes, pattern custom — la fonte unica
     ├── Tech/           → Python, SQL, Docker, ERP patterns

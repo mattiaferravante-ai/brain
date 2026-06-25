@@ -16,6 +16,9 @@
 # Claude Code local settings
 .claude/settings.local.json
 
+# Brain RAG data (vector store + state locale)
+Tools/brain_rag/data/
+
 # Secrets — mai nel Brain
 *.env
 *.pem
