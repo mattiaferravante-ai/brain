@@ -201,7 +201,7 @@ draft → approval → approved → sent → accepted
 ## Documenti Knowledge Base
 
 - `AF/TEA_AE_CRM_Contratti_AF_00.1.docx` — Analisi Funzionale bozza 00.1 — basata su meeting notes analisi
-- `TEA - A&E - Gestione preventivi ed ordini di vendita CRM Odoo - Analisi Funzionale - Rev. 02.0.docx` — AF Rev. 02.0 (20/05/2026) — aggiornamenti a valle di sviluppo e sessioni di preview (attualmente in Downloads)
+- `AF/TEA_AE_CRM_Contratti_AF_02.0.docx` — AF Rev. 02.0 (30/06/2026) — aggiornamento post-sviluppo e sessioni di preview, formato Avvale brand
 - `TechNotes/PIANO_IMPLEMENTAZIONE.md` — Piano implementazione completo v6 (architettura, modelli, viste, sicurezza, test)
 - `MeetingNotes/2026-03-16_incontro-analisi-1.md` — AS-IS processo offerte, requisiti CRM, flusso approvazione
 - `MeetingNotes/2026-03-19_incontro-analisi-2.md` — Utenti, migrazione clienti, listino prezzi, logica trasporto

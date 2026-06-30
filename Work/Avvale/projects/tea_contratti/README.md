@@ -33,6 +33,19 @@ Nuova implementazione Odoo 19 Enterprise per TEA Ambiente e Ecologia. Modulo cus
 <!-- Aggiungi qui milestone, go-live, UAT, consegne AF, ecc. -->
 <!-- Formato: - `YYYY-MM-DD` — descrizione scadenza -->
 
+## Documenti AF
+
+| File | Rev | Data | Note |
+|------|-----|------|------|
+| `AF/TEA_AE_CRM_Contratti_AF_00.1.docx` | 00.1 | 16/03/2026 | Prima bozza da workshop di analisi |
+| `AF/TEA_AE_CRM_Contratti_AF_02.0.docx` | 02.0 | 30/06/2026 | Aggiornamento post-sviluppo e sessioni di preview — Avvale brand |
+
+## Documenti UAT
+
+| File | Versione | Data | Note |
+|------|----------|------|------|
+| `UAT/TEA_AE_UAT_test_book_v1.xlsx` | v1 | 30/06/2026 | Test book completo — 8 aree, 24F + 20T test case |
+
 ## Sottocartelle
 
 - `AF/` — Analisi Funzionali

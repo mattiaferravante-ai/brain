@@ -109,10 +109,15 @@ Versioning convention:
 - `01.0` → prima versione ufficiale
 - `01.x` → revisioni post-delivery
 
-### 3. Indice
+### 3. Indice (Sommario) — OBBLIGATORIO
 
-Generato automaticamente con `TableOfContents` docx-js, su pagina separata
-dopo Registro Versioni.
+Pagina separata dopo Registro Versioni. **Non omettere mai questa sezione.**
+
+Il sommario è un campo Word (`TOC`) che si aggiorna automaticamente quando
+l'utente apre il documento in Word. Deve essere generato con XML python-docx
+(non con testo semplice) → vedere sezione "Generazione TOC .docx" più sotto.
+
+Includere tutti i livelli H1, H2, H3 del documento (livelli 1–3).
 
 ### 4. Processo AS-IS
 
@@ -219,8 +224,73 @@ Tabella delle questioni aperte, decisioni pendenti o informazioni mancanti.
 6. Intestazione: titolo documento + numero revisione (destra) | logo (sinistra),
    bordo inferiore Celadon Green `#248B7E` (da `avvale-brand` tokens)
 7. Footer: copyright Avvale + dati societari → skill `avvale-brand` → `references/docx_brand.md`
-8. TOC automatico su pagina separata dopo Registro Versioni
+8. **TOC (Sommario) — OBBLIGATORIO**: generare subito dopo il Registro Versioni,
+   su pagina separata. Usare il codice XML python-docx della sezione dedicata
+   qui sotto. **Non saltare mai questa sezione.**
 9. Numerazione pagine: footer centrato, formato "Pagina X di Y"
+
+---
+
+## Generazione TOC .docx — Codice obbligatorio
+
+python-docx non ha un'API diretta per il sommario. Usare sempre questo pattern
+XML che inserisce un campo Word `TOC` nativo (si aggiorna automaticamente
+quando il destinatario apre il documento e accetta l'aggiornamento campi):
+
+```python
+from docx.oxml.ns import qn
+from docx.oxml import OxmlElement
+
+def add_table_of_contents(document):
+    """Inserisce il sommario come campo Word TOC (livelli H1-H3)."""
+    # Titolo sezione
+    document.add_heading("Indice", level=1)
+
+    # Paragrafo contenente il campo TOC
+    paragraph = document.add_paragraph()
+    run = paragraph.add_run()
+
+    # begin
+    fld_begin = OxmlElement('w:fldChar')
+    fld_begin.set(qn('w:fldCharType'), 'begin')
+    run._r.append(fld_begin)
+
+    # istruzione TOC: livelli 1-3, con hyperlink, compatta
+    instr = OxmlElement('w:instrText')
+    instr.set(qn('xml:space'), 'preserve')
+    instr.text = ' TOC \\o "1-3" \\h \\z \\u '
+    run._r.append(instr)
+
+    # separate
+    fld_sep = OxmlElement('w:fldChar')
+    fld_sep.set(qn('w:fldCharType'), 'separate')
+    run._r.append(fld_sep)
+
+    # placeholder visibile (facoltativo, Word lo sovrascrive)
+    placeholder = OxmlElement('w:t')
+    placeholder.text = '[Aggiornare il sommario: tasto destro → Aggiorna campo]'
+    run._r.append(placeholder)
+
+    # end
+    fld_end = OxmlElement('w:fldChar')
+    fld_end.set(qn('w:fldCharType'), 'end')
+    run._r.append(fld_end)
+
+    # pagina nuova dopo il sommario
+    document.add_page_break()
+```
+
+**Chiamata obbligatoria**: inserire `add_table_of_contents(doc)` subito dopo
+aver generato il Registro Versioni e prima di qualsiasi sezione di contenuto.
+
+**Comportamento in Word**: alla prima apertura, Word mostrerà il placeholder o
+un sommario vuoto e chiederà all'utente di aggiornare i campi. Il sommario
+si popola con i titoli reali del documento. I link interni (⌘/Ctrl+click)
+funzionano grazie al flag `\h`.
+
+> **Nota per la revisione**: se il documento viene modificato dopo la
+> generazione, istruire il destinatario a fare clic con il tasto destro sul
+> sommario → "Aggiorna campo" → "Aggiorna intero sommario".
 
 ### Tabelle standard
 - Header row: sfondo Celadon Green `#248B7E` (da `avvale-brand` tokens), testo bianco bold
